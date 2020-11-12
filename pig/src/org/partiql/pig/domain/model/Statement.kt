@@ -84,7 +84,7 @@ class PermutedDomain(
                     semanticError(this.metas, SemanticErrorContext.CannotRemoveBuiltinType(removedTypeName))
                 }
                 else -> {
-                    if(!newTypes.removeIf { oldType -> oldType.tag == removedTypeName }) {
+                    if (!newTypes.removeIf { oldType -> oldType.tag == removedTypeName }) {
                         error("Failed to remove $removedTypeName for some reason")
                     }
                 }
